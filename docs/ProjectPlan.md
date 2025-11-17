@@ -62,8 +62,8 @@ Our UML class diagram includes:
 - Three associations with multiplicities (1 → 0..*, 0..* ↔ 0..*)  
 
 **Files:**
-- `docs/UML.png` – Image for the report and GitHub preview  
-- `docs/UML.drawio` – Editable version  
+- `docs/Gradebook-manager.drawio.svg` – Image for the report and GitHub preview  
+
 
 (The diagram is not embedded here but stored in the `/docs` folder.)
 
