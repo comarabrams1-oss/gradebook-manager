@@ -1,3 +1,3 @@
-git rm docs/Gradebook-manager.drawio.svg
+git rm docs/Gradebook-manager.drawio
 git commit -m "Delete SVG"
 git push
