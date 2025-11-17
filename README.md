@@ -41,7 +41,7 @@ The UML class diagram for `Student`, `Course`, and `GradeBook` with relationship
 ![UML Diagram](docs/Gradebook-manager.drawio.svg)
 ## How to Compile and Run
 
-You can use this link `http://onlinegdb.com/online_c++_compiler` and copy the code from the `src` folder or use the a terminal to execute the code.
+You can use this link `http://onlinegdb.com/online_c++_compiler` and copy the code from the `src` folder or use a terminal to execute the code.
 
 From the `src` folder (or repo root if you prefer):
 
