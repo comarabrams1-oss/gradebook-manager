@@ -1,3 +1,0 @@
-git rm docs/Gradebook-manager.drawio
-git commit -m "Delete SVG"
-git push
