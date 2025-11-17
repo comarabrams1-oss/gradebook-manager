@@ -364,4 +364,8 @@ int main() {
 
     return 0; 
 
-} 
+}
+
+
+
+ g++ -std=c++17 -Wall main.cpp -o gradebook
