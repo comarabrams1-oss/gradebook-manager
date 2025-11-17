@@ -21,7 +21,7 @@ public:
     std::string getName() const { return name; } 
 
     int getID() const { return student_id; } 
-
+  
  
 
     void addGrade(int courseID, double grade) { grades[courseID] = grade; } 
@@ -367,5 +367,3 @@ int main() {
 }
 
 
-
- g++ -std=c++17 -Wall main.cpp -o gradebook
