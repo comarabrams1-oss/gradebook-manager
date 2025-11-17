@@ -1,3 +1,9 @@
+/* 
+Gradebook Manager
+Nov 25, 2025
+Comar Abrams & Carlos Brown
+*/
+
 #include <iostream> 
 
 #include <string> 
