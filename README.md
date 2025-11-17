@@ -46,3 +46,6 @@ From the `src` folder (or repo root if you prefer):
 ```bash
 g++ -std=c++17 -O2 -Wall main.cpp -o gradebook
 ./gradebook
+
+or
+Or you can 
