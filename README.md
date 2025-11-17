@@ -35,7 +35,6 @@ GradeBook Manager is a C++ console application that lets a user create students 
 The UML class diagram for `Student`, `Course`, and `GradeBook` with relationships and multiplicities is saved as:
 
 - `docs/Gradebook-manager.drawio.svg` (exported from draw.io)
-- `docs/Gradebook-manager.drawio` (source file)
 ## UML Diagram
 
 ![UML Diagram](docs/Gradebook-manager.drawio.svg)
