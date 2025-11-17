@@ -104,8 +104,7 @@ The UML diagram visually represents:
 - GradeBook → Student and GradeBook → Course (1 → 0..*)
 
 **Files included:**  
-- `docs/UML.png` – UML image  
-- `docs/UML.drawio` – editable diagram  
+- `docs/Gradebook-manager.drawio.svg` – UML image  
 
 ---
 
