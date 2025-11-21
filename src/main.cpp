@@ -372,7 +372,7 @@ int main() {
             cout << "Enter student ID: ";
             cin >> sid;
 
-            cout << "Enter course ID (101 or 102): ";
+            cout << "Enter course ID: ";
             cin >> cid;
 
             cout << "Enter grade (0–100): ";
