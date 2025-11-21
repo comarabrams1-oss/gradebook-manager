@@ -12,6 +12,7 @@ Comar Abrams & Carlos Brown
 
 #include <iomanip> 
 
+using namespace std;
  
 
 class Student { 
@@ -20,11 +21,11 @@ public:
 
     Student() : name(""), student_id(-1) {} 
 
-    Student(const std::string& n, int id) : name(n), student_id(id) {} 
+    Student(const string& n, int id) : name(n), student_id(id) {} 
 
  
 
-    std::string getName() const { return name; } 
+    string getName() const { return name; } 
 
     int getID() const { return student_id; } 
   
@@ -50,11 +51,11 @@ public:
 
     void printTranscript() const { 
 
-        std::cout << "Transcript for " << name << " (ID " << student_id << "):\n"; 
+        cout << "Transcript for " << name << " (ID " << student_id << "):\n"; 
 
         if (grades.empty()) { 
 
-            std::cout << "  No grades recorded.\n"; 
+            cout << "  No grades recorded.\n"; 
 
             return; 
 
@@ -62,29 +63,29 @@ public:
 
         for (auto &p : grades) { 
 
-            std::cout << "  Course " << p.first << " : " << p.second << "\n"; 
+            cout << "  Course " << p.first << " : " << p.second << "\n"; 
 
         } 
 
         double avg = getAverage(); 
 
-        if (avg >= 0) std::cout << "  Average: " << std::fixed << std::setprecision(2) << avg << "\n"; 
+        if (avg >= 0) cout << "  Average: " << fixed << setprecision(2) << avg << "\n"; 
 
     } 
 
  
 
-    const std::map<int,double>& getGrades() const { return grades; } 
+    const map<int,double>& getGrades() const { return grades; } 
 
  
 
 private: 
 
-    std::string name; 
+    string name; 
 
     int student_id; 
 
-    std::map<int,double> grades; 
+    map<int,double> grades; 
 
 }; 
 
@@ -96,13 +97,13 @@ public:
 
     Course() : course_id(-1), course_name(""), credits(0) {} 
 
-    Course(const std::string& n, int id, int c) : course_name(n), course_id(id), credits(c) {} 
+    Course(const string& n, int id, int c) : course_name(n), course_id(id), credits(c) {} 
 
  
 
     int getID() const { return course_id; } 
 
-    std::string getName() const { return course_name; } 
+    string getName() const { return course_name; } 
 
     int getCredits() const { return credits; } 
 
@@ -126,19 +127,19 @@ public:
 
  
 
-    const std::map<int,double>& getStudentGrades() const { return studentGrades; } 
+    const map<int,double>& getStudentGrades() const { return studentGrades; } 
 
  
 
 private: 
 
-    std::string course_name; 
+    string course_name; 
 
     int course_id; 
 
     int credits; 
 
-    std::map<int,double> studentGrades; 
+    map<int,double> studentGrades; 
 
 }; 
 
@@ -220,7 +221,7 @@ public:
 
         if (it == students.end()) { 
 
-            std::cout << "Student ID " << studentID << " not found.\n"; 
+            cout << "Student ID " << studentID << " not found.\n"; 
 
             return; 
 
@@ -238,7 +239,7 @@ public:
 
         if (it == courses.end()) { 
 
-            std::cout << "Course ID " << courseID << " not found.\n"; 
+            cout << "Course ID " << courseID << " not found.\n"; 
 
             return; 
 
@@ -246,11 +247,11 @@ public:
 
         const Course &c = it->second; 
 
-        std::cout << "Course " << c.getName() << " (ID " << c.getID() << ", credits " << c.getCredits() << ")\n"; 
+        cout << "Course " << c.getName() << " (ID " << c.getID() << ", credits " << c.getCredits() << ")\n"; 
 
         if (c.getStudentGrades().empty()) { 
 
-            std::cout << "  No grades recorded.\n"; 
+            cout << "  No grades recorded.\n"; 
 
             return; 
 
@@ -258,13 +259,13 @@ public:
 
         for (auto &p : c.getStudentGrades()) { 
 
-            std::cout << "  Student " << p.first << " : " << p.second << "\n"; 
+            cout << "  Student " << p.first << " : " << p.second << "\n"; 
 
         } 
 
         double avg = c.getAverage(); 
 
-        if (avg >= 0) std::cout << "  Average: " << std::fixed << std::setprecision(2) << avg << "\n"; 
+        if (avg >= 0) cout << "  Average: " << fixed << setprecision(2) << avg << "\n"; 
 
     } 
 
@@ -306,7 +307,7 @@ public:
 
  
 
-        std::cout << "=== Student Reports ===\n"; 
+        cout << "=== Student Reports ===\n"; 
 
         gb.printStudentReport(201); 
 
@@ -316,7 +317,7 @@ public:
 
  
 
-        std::cout << "\n=== Course Reports ===\n"; 
+        cout << "\n=== Course Reports ===\n"; 
 
         gb.printCourseReport(101); 
 
@@ -324,11 +325,11 @@ public:
 
  
 
-        std::cout << "\n=== Averages ===\n"; 
+        cout << "\n=== Averages ===\n"; 
 
-        std::cout << "Alice average: " << gb.studentAverage(201) << "\n"; 
+        cout << "Alice average: " << gb.studentAverage(201) << "\n"; 
 
-        std::cout << "Course 101 average: " << gb.courseAverage(101) << "\n"; 
+        cout << "Course 101 average: " << gb.courseAverage(101) << "\n"; 
 
  
 
@@ -336,7 +337,7 @@ public:
 
         gb.addStudent(Student("Donna", 204)); 
 
-        std::cout << "\n=== Donna (no grades) ===\n"; 
+        cout << "\n=== Donna (no grades) ===\n"; 
 
         gb.printStudentReport(204); 
 
@@ -346,7 +347,7 @@ public:
 
         bool ok = gb.assignGrade(999, 101, 50.0); 
 
-        std::cout << "\nAssign grade to non-existent student returned: " << (ok ? "true" : "false") << "\n"; 
+        cout << "\nAssign grade to non-existent student returned: " << (ok ? "true" : "false") << "\n"; 
 
     } 
 
@@ -354,9 +355,9 @@ public:
 
 private: 
 
-    std::map<int, Student> students; 
+    map<int, Student> students; 
 
-    std::map<int, Course> courses; 
+    map<int, Course> courses; 
 
 }; 
 
@@ -364,8 +365,37 @@ private:
 
 int main() { 
 
-    std::cout << "GradeBook Manager demo running...\n\n"; 
+    cout << "GradeBook Manager demo running...\n\n";
 
+    Gradebook gb;
+    gb.addCourse(Course("Intro to Security", 101, 3));
+    gb.addCourse(Course("Data Structures", 102, 4));
+
+    string name;
+    int studentID;
+    int courseID;
+    double grade;
+
+    cout << "User Input" << endl;
+    cout << "Enter student's name" << endl;
+    getline(cin >>  ws,name);
+    cout << "Enter student ID" << endl;
+    cin >> studentID;
+    cout << "Enter course number (101 or 102)" << endl;
+    cin >> courseID;
+    cout << "Enter Grade (0-100)" << endl;
+    cin >> grade;
+
+    gb.addStudent(Student(name, grade));
+    if (gb.assignGrade(studentID, courseID, grade)) {
+      cout << "\n Student Report After Input";
+      gb.printStudentReport(studentID);
+    } else {
+     cout << "Invalid student or course ID. Grade not assigned." << endl;
+    }  
+     
+     
+    cout << "Demo Cases";
     GradeBook::demo(); 
 
     return 0; 
