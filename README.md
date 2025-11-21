@@ -1,81 +1,91 @@
-GradeBook Manager – CSC 138 Team Project
-Team Members
+# GradeBook Manager – CSC 138 Team Project
 
-Comar Abrams
+## Team Members
+- Comar Abrams  
+- Carlos Brown  
 
-Carlos Brown
+## Overview
+GradeBook Manager is a C++ console application that allows users to add students, assign grades, and generate reports. It demonstrates basic object-oriented programming using three main classes: `Student`, `Course`, and `GradeBook`.
 
-Overview
+The program supports an interactive menu for user input as well as an automated demo function that showcases multiple test scenarios.
 
-GradeBook Manager is a C++ console application that allows users to add students and courses, assign grades, and view student or course reports. The project demonstrates basic object-oriented programming using three classes: Student, Course, and GradeBook.
+## Features
+- Add students  
+- Assign grades to students  
+- Print student transcripts  
+- Print course reports  
+- Compute student and course averages  
+- Handle invalid IDs  
+- Run automated demo cases  
 
-The program also includes:
+## Classes
+### Student
+- Stores student name, ID, and a map of grades  
+- Methods: `addGrade`, `getAverage`, `printTranscript`
 
-An interactive menu for user input
+### Course
+- Stores course ID, name, credits, and student grade entries  
+- Methods: `addStudentGrade`, `getAverage`
 
-A demo function that runs several automated test cases
+### GradeBook
+- Stores all students and courses  
+- Methods:  
+  `addStudent`, `addCourse`, `assignGrade`,  
+  `studentAverage`, `courseAverage`,  
+  `printStudentReport`, `printCourseReport`, `demo`
 
-Features
+## UML Diagram
+The UML diagram is stored at:
 
-Add students
-
-Assign grades to students
-
-View student transcripts
-
-View course reports
-
-Compute student and course averages
-
-Handle invalid IDs
-
-Run automated demo scenarios
-
-Classes
-
-Student – stores student name, ID, and grades
-
-Course – stores course ID, name, credits, and student grades
-
-GradeBook – manages all students and courses, assigns grades, and prints reports
-
-UML Diagram
+```
 docs/Gradebook-manager.drawio.svg
+```
 
+If the file exists in GitHub, it will display automatically when clicked.
 
-(Include the image in your repo for GitHub to display)
+## How to Compile and Run
 
-Running the Program
-Compile
+### Compile
+```bash
 g++ -std=c++17 -O2 -Wall main.cpp -o gradebook
+```
 
-Run
+### Run
+```bash
 ./gradebook
+```
 
-Online Compiler
-
-You may also run the program here:
+### Online Compiler
+You may also run the program here:  
 https://onlinegdb.com/online_c++_compiler
 
-Menu Example
+## Example Menu Interaction
+```
 === MENU ===
 1. Add a new student
 2. Assign a grade to a student
 3. Print a student report
 4. Print a course report
 5. Exit and run demo
+```
 
-Demo Mode
+## Demo Mode
+After exiting the menu, the program automatically runs a series of test cases:
+- Multiple students with multiple courses  
+- Students with no grades  
+- Invalid grade assignment  
+- Course and student averages  
+- Full student and course reports  
 
-After exiting the menu, the built-in demo runs automatically.
-It includes:
+## File Structure
+```
+project/
+ ├── docs/
+ │    └── Gradebook-manager.drawio.svg
+ ├── src/
+ │    └── main.cpp
+ └── README.md
+```
 
-Multiple students and courses
-
-Students with multiple grades
-
-A student with no grades
-
-Handling invalid grade assignments
-
-Printing averages
+## Conclusion
+GradeBook Manager demonstrates essential OOP concepts in C++. It provides a functional grade-management system with both interactive input and automated test cases, making it suitable for coursework and introductory programming projects.
