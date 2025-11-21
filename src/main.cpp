@@ -364,10 +364,9 @@ private:
  
 
 int main() { 
-
     cout << "GradeBook Manager demo running...\n\n";
 
-    Gradebook gb;
+    GradeBook gb;
     gb.addCourse(Course("Intro to Security", 101, 3));
     gb.addCourse(Course("Data Structures", 102, 4));
 
@@ -376,30 +375,29 @@ int main() {
     int courseID;
     double grade;
 
-    cout << "User Input" << endl;
-    cout << "Enter student's name" << endl;
-    getline(cin >>  ws,name);
-    cout << "Enter student ID" << endl;
+    cout << "Enter student's name: ";
+    getline(cin >> ws, name);
+
+    cout << "Enter student ID: ";
     cin >> studentID;
-    cout << "Enter course number (101 or 102)" << endl;
+
+    cout << "Enter course number (101 or 102): ";
     cin >> courseID;
-    cout << "Enter Grade (0-100)" << endl;
+
+    cout << "Enter grade (0-100): ";
     cin >> grade;
 
-    gb.addStudent(Student(name, grade));
+    gb.addStudent(Student(name, studentID));
+
     if (gb.assignGrade(studentID, courseID, grade)) {
-      cout << "\n Student Report After Input";
-      gb.printStudentReport(studentID);
+        cout << "\nStudent Report After Input\n";
+        gb.printStudentReport(studentID);
     } else {
-     cout << "Invalid student or course ID. Grade not assigned." << endl;
-    }  
-     
-     
-    cout << "Demo Cases";
-    GradeBook::demo(); 
+        cout << "Invalid student or course ID. Grade not assigned.\n";
+    }
 
-    return 0; 
+    cout << "\nDemo Cases\n";
+    GradeBook::demo();
 
+    return 0;
 }
-
-
