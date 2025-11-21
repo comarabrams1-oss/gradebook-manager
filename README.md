@@ -77,15 +77,5 @@ After exiting the menu, the program automatically runs a series of test cases:
 - Course and student averages  
 - Full student and course reports  
 
-## File Structure
-```
-project/
- ├── docs/
- │    └── Gradebook-manager.drawio.svg
- ├── src/
- │    └── main.cpp
- └── README.md
-```
-
 ## Conclusion
 GradeBook Manager demonstrates essential OOP concepts in C++. It provides a functional grade-management system with both interactive input and automated test cases, making it suitable for coursework and introductory programming projects.
