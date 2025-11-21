@@ -1,50 +1,81 @@
-# GradeBook Manager – CSC 138 Team Project
+GradeBook Manager – CSC 138 Team Project
+Team Members
 
-## Team Members
-- Comar Abrams – UML Design, GitHub Repo, Report Coordinator  
-- Carlos Brown – Lead Developer, Testing, Video Presenter  
+Comar Abrams
 
-## Project Description
+Carlos Brown
 
-GradeBook Manager is a C++ console application that lets a user create students and courses, assign grades, and compute averages. The program demonstrates basic object-oriented design in C++ using three main classes: `Student`, `Course`, and `GradeBook`. Users can see per-student transcripts and per-course grade reports.
+Overview
 
-## Features
+GradeBook Manager is a C++ console application that allows users to add students and courses, assign grades, and view student or course reports. The project demonstrates basic object-oriented programming using three classes: Student, Course, and GradeBook.
 
-- Add students and courses
-- Assign grades for a student in a course
-- Compute per-student and per-course averages
-- Print formatted transcripts and course reports
-- Demonstration cases in `main.cpp::demo()` (multiple students/courses, student with no grades, invalid operations)
+The program also includes:
 
-## Classes Overview
+An interactive menu for user input
 
-- **Student**
-  - Attributes: `name`, `student_id`, `grades (map<int,double>)`
-  - Key methods: `addGrade`, `getAverage`, `printTranscript`
+A demo function that runs several automated test cases
 
-- **Course**
-  - Attributes: `course_id`, `course_name`, `credits`, `studentGrades (map<int,double>)`
-  - Key methods: `addStudentGrade`, `getAverage`
+Features
 
-- **GradeBook**
-  - Attributes: `students (map<int,Student>)`, `courses (map<int,Course>)`
-  - Key methods: `addStudent`, `addCourse`, `assignGrade`, `studentAverage`, `courseAverage`, `printStudentReport`, `printCourseReport`, `demo`
+Add students
 
-## UML Diagram
+Assign grades to students
 
-The UML class diagram for `Student`, `Course`, and `GradeBook` with relationships and multiplicities is saved as:
+View student transcripts
 
-- `docs/Gradebook-manager.drawio.svg` (exported from draw.io)
-## UML Diagram
+View course reports
 
-![UML Diagram](docs/Gradebook-manager.drawio.svg)
-## How to Compile and Run
+Compute student and course averages
 
-You can use this link `http://onlinegdb.com/online_c++_compiler` and copy the code from the `src` folder or use a terminal to execute the code.
+Handle invalid IDs
 
-From the `src` folder (or repo root if you prefer):
+Run automated demo scenarios
 
-```bash
+Classes
+
+Student – stores student name, ID, and grades
+
+Course – stores course ID, name, credits, and student grades
+
+GradeBook – manages all students and courses, assigns grades, and prints reports
+
+UML Diagram
+docs/Gradebook-manager.drawio.svg
+
+
+(Include the image in your repo for GitHub to display)
+
+Running the Program
+Compile
 g++ -std=c++17 -O2 -Wall main.cpp -o gradebook
+
+Run
 ./gradebook
 
+Online Compiler
+
+You may also run the program here:
+https://onlinegdb.com/online_c++_compiler
+
+Menu Example
+=== MENU ===
+1. Add a new student
+2. Assign a grade to a student
+3. Print a student report
+4. Print a course report
+5. Exit and run demo
+
+Demo Mode
+
+After exiting the menu, the built-in demo runs automatically.
+It includes:
+
+Multiple students and courses
+
+Students with multiple grades
+
+A student with no grades
+
+Handling invalid grade assignments
+
+Printing averages
